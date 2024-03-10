@@ -8,7 +8,7 @@ jobs:
   build_libretro:
     strategy:
       matrix:
-        arch: [so64, x86, x64]
+        arch: [so64]
       fail-fast: false
 
 
@@ -17,7 +17,7 @@ jobs:
 
     steps:
 
-    - uses: li1ht2ay-3es/te1pl2te@build
+    - uses: li1ht2ay-3es/ym1202173-ca4sk5ll@build
       with:
         branch: upstream
         arch: ${{ matrix.arch }}
