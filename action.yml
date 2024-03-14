@@ -83,7 +83,7 @@ runs:
 
       mkdir marsdev
       cd marsdev
-      git clone -b 94d20a5972d0b3e7c36a90a9ee97deddfea112da https://github.com/andwn/marsdev
+      git clone -b 94d20a5972d0b3e7c36a90a9ee97deddfea112da https://github.com/andwn/marsdev.git
       make m68k-toolchain
 
 
