@@ -69,7 +69,6 @@ runs:
       # make m68k-toolchain
 
       # make platform="win"
-      ./build_rom.sh
 
 
 
@@ -80,7 +79,9 @@ runs:
       CXX: ccache g++
     shell: bash
     run: |
-      make platform="unix"
+      # make platform="unix"
+
+      ./build_rom.sh
 
 
 
