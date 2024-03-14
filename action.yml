@@ -24,6 +24,22 @@ runs:
 
   steps:
 
+  - uses: li1ht2ay-3es/gi1-ac2io3s@checkout-repo
+    with:
+      repository: andwn/marsdev
+      branch: 94d20a5972d0b3e7c36a90a9ee97deddfea112da
+
+      token: ${{ inputs.token }}
+      auto: true
+
+
+  - shell: bash
+    working-directory: ${{ github.workspace }}
+    run: |
+      make m68k-toolchain
+
+
+
   - uses: li1ht2ay-3es/gi1-ac2io3s@checkout-branch
     with:
       branch: ${{ inputs.branch }}
@@ -80,11 +96,6 @@ runs:
     shell: bash
     run: |
       # make platform="unix"
-
-      mkdir marsdev
-      cd marsdev
-      git clone -b 94d20a5972d0b3e7c36a90a9ee97deddfea112da https://github.com/andwn/marsdev.git
-      make m68k-toolchain
 
 
 
