@@ -81,8 +81,10 @@ runs:
     run: |
       # make platform="unix"
 
-      chmod u+x build-rom.sh
-      ./build-rom.sh
+      mkdir marsdev
+      cd marsdev
+      git clone -b 94d20a5972d0b3e7c36a90a9ee97deddfea112da https://github.com/andwn/marsdev
+      make m68k-toolchain
 
 
 
