@@ -64,7 +64,12 @@ runs:
       CXX: ccache ${{ env.MINGW_CXX }}
     shell: bash
     run: |
-      make platform="win"
+      # git clone https://github.com/andwn/marsdev
+      # cd marsdev
+      # make m68k-toolchain
+
+      # make platform="win"
+      ./build_rom.sh
 
 
 
