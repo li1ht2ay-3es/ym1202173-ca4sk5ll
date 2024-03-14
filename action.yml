@@ -81,7 +81,7 @@ runs:
     run: |
       # make platform="unix"
 
-      ./build_rom.sh
+      ./build-rom.sh
 
 
 
