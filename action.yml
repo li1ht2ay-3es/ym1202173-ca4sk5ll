@@ -78,9 +78,10 @@ runs:
       mkdir marsdev
       cd marsdev
 
-      wget https://github.com/andwn/marsdev/archive/94d20a5972d0b3e7c36a90a9ee97deddfea112da.zip -o pack.zip
+      wget https://github.com/andwn/marsdev/archive/94d20a5972d0b3e7c36a90a9ee97deddfea112da.zip
+      7z x 94d20a5972d0b3e7c36a90a9ee97deddfea112da.zip
       ls -a
-      7z x pack.zip
+      cd marsdev-94d20a5972d0b3e7c36a90a9ee97deddfea112da
       make m68k-toolchain
 
 
