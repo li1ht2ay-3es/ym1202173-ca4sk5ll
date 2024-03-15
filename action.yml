@@ -67,7 +67,6 @@ runs:
       # make platform="win"
 
 
-
   - if: inputs.arch == 'so64'
     working-directory: ${{ github.workspace }}
     env:
@@ -75,23 +74,9 @@ runs:
       CXX: ccache g++
     shell: bash
     run: |
-      docker build \
-        --tag "andwn/ym2017:latest" \
-        --build-arg MARSDEV_REVISION="2017.09.12" \
-        .
-      docker run \
-        --volume "${PWD}:/src" \
-        --rm \
-        --name "ym2017" \
-        "andwn/ym2017:latest" \
-        /bin/bash -c "make clean all"
-      GIT_REVISION=$(docker run \
-        --volume "${PWD}:/src" \
-        --rm \
-        --name "ym2017" \
-        "andwn/ym2017:latest" \
-        /bin/bash -c "git rev-parse HEAD")
-      mv ym2017.bin ym2017-${GIT_REVISION}.bin
+      wget https://github.com/andwn/marsdev/releases/download/2017.09.12/marsdev-nosh-nogdb.tar.bz2
+      7z x marsdev-nosh-nogdb.tar.bz2
+      ls -R
 
 
   - uses: actions/upload-artifact@main
