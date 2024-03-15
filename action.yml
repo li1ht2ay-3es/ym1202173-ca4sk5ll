@@ -82,7 +82,7 @@ runs:
       7z x 94d20a5972d0b3e7c36a90a9ee97deddfea112da.zip
       cd marsdev-94d20a5972d0b3e7c36a90a9ee97deddfea112da
       make m68k-toolchain
-      ls -a
+      ls -R
 
 
 
