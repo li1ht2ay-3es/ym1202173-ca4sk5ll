@@ -80,9 +80,9 @@ runs:
 
       wget https://github.com/andwn/marsdev/archive/94d20a5972d0b3e7c36a90a9ee97deddfea112da.zip
       7z x 94d20a5972d0b3e7c36a90a9ee97deddfea112da.zip
-      ls -a
       cd marsdev-94d20a5972d0b3e7c36a90a9ee97deddfea112da
       make m68k-toolchain
+      ls -a
 
 
 
@@ -93,7 +93,7 @@ runs:
       CXX: ccache g++
     shell: bash
     run: |
-      # make platform="unix"
+      make platform="unix"
 
 
 
@@ -101,5 +101,4 @@ runs:
     with:
       name: program_${{ inputs.arch }}
       path: |
-        ${{ github.workspace }}/**.dll
-        ${{ github.workspace }}/**.so
+        ${{ github.workspace }}/**.bin
