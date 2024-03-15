@@ -75,24 +75,6 @@ runs:
       CXX: ccache g++
     shell: bash
     run: |
-      mkdir marsdev
-      cd marsdev
-
-      wget https://github.com/andwn/marsdev/archive/94d20a5972d0b3e7c36a90a9ee97deddfea112da.zip
-      7z x 94d20a5972d0b3e7c36a90a9ee97deddfea112da.zip
-      cd marsdev-94d20a5972d0b3e7c36a90a9ee97deddfea112da
-      make m68k-toolchain
-      ls -R
-
-
-
-  - if: inputs.arch == 'so64'
-    working-directory: ${{ github.workspace }}
-    env:
-      CC: ccache gcc
-      CXX: ccache g++
-    shell: bash
-    run: |
       docker build \
         --tag "andwn/ym2017:latest" \
         --build-arg MARSDEV_REVISION="2017.09.12" \
