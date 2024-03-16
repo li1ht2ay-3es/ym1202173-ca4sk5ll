@@ -80,8 +80,9 @@ runs:
       7z x marsdev-nosh-nogdb.tar
       chmod 777 -R mars
 
-      ./mars/m68k-elf/bin/m68k-elf-gcc -v
-      make
+      mars/m68k-elf/bin/m68k-elf-gcc -v
+      mars/m68k-elf/bin/m68k-elf-gcc -v
+      # make
 
 
   - uses: actions/upload-artifact@main
