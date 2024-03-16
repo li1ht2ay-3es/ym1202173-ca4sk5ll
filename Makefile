@@ -50,13 +50,16 @@ symbol.txt:
 	$(NM) --plugin=$(PLUGIN)/liblto_plugin.so -n ym2017.elf > symbol.txt
 
 src/boot/sega.o: src/boot/rom_head.bin
+	echo "rom_head.bin $<"
 	$(AS) $(ASFLAGS) src/boot/sega.s -o $@
 
 %.bin: %.elf
+	echo "OBJC $<"
 	$(OBJC) -S -O binary $< temp.bin
 	dd if=temp.bin of=$@ bs=8192 conv=sync
 
 %.elf: $(BOOT_RESOURCES) $(OBJS) 
+	echo "OBJS $<"
 	$(CC) -o $@ $(LINKFLAGS) $(BOOT_RESOURCES) $(OBJS) $(LIBS)
 
 %.o: %.c
@@ -69,19 +72,24 @@ src/boot/sega.o: src/boot/rom_head.bin
 	@$(AS) $(ASFLAGS) $< -o $@
 
 %.s: %.res
+	echo "rescomp $<"
 	$(RESCOMP) $< $@
 
 %.o80: %.s80
+	echo "asmz80 $<"
 	$(ASMZ80) $(FLAGSZ80) $< $@ out.lst
 
 %.s: %.o80
+	echo "bintos $<"
 	$(BINTOS) $<
 
 src/boot/rom_head.o: src/boot/rom_head.c
+	echo "rom_head.c $<"
 	ls -a
 	$(CC) $(INCS) -m68000 -Wall -Wextra -std=c99 -c -fno-builtin -o $@ $<
 
 src/boot/rom_head.bin: src/boot/rom_head.o
+	echo "rom_head.o $<"
 	ls -a
 	$(LD) $(LINKFLAGS) --oformat binary -o $@ $<
 
