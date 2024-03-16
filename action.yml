@@ -80,8 +80,8 @@ runs:
       7z x marsdev-nosh-nogdb.tar
       chmod 777 -R mars
 
-      mars/m68k-elf/bin/m68k-elf-gcc -v
-      mars/m68k-elf/bin/m68k-elf-gcc -v
+      mars/m68k-elf/bin/m68k-elf-gcc --version
+      mars/m68k-elf/bin/m68k-elf-gcc test.c
       # make
 
 
