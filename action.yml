@@ -82,7 +82,7 @@ runs:
       ls -R
 
       mars/m68k-elf/bin/m68k-elf-gcc --version
-      cd mars/m68k-elf/bin/
+      cd mars/m68k-elf/bin
       m68k-elf-gcc --version
       m68k-elf-gcc version.c
       # make
