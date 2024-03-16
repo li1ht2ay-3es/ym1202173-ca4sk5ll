@@ -78,14 +78,14 @@ runs:
       wget https://github.com/andwn/marsdev/releases/download/2017.09.12/marsdev-nosh-nogdb.tar.bz2
       7z x marsdev-nosh-nogdb.tar.bz2
       7z x marsdev-nosh-nogdb.tar
-      chmod 777 -R mars
-      ls -R
+      chmod 777 -R .
+      # ls -R
 
       mars/m68k-elf/bin/m68k-elf-gcc --version
       cd mars/m68k-elf/bin
-      ls -R
+      # ls -R
       m68k-elf-gcc --version
-      m68k-elf-gcc version.c
+      # m68k-elf-gcc version.c
       # make
 
 
