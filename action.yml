@@ -76,6 +76,7 @@ runs:
     run: |
       wget https://github.com/andwn/marsdev/releases/download/2017.09.12/marsdev-nosh-nogdb.tar.bz2
       7z x marsdev-nosh-nogdb.tar.bz2
+      7z x marsdev-nosh-nogdb.tar
       ls -R
 
 
