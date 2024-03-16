@@ -81,7 +81,8 @@ runs:
       chmod 777 -R mars
 
       mars/m68k-elf/bin/m68k-elf-gcc --version
-      mars/m68k-elf/bin/m68k-elf-gcc test.c
+      cd mars/m68k-elf/bin/
+      m68k-elf-gcc-7.2.0 test.c
       # make
 
 
