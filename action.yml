@@ -72,6 +72,7 @@ runs:
     env:
       CC: ccache gcc
       CXX: ccache g++
+      MARSDEV: ${{ github.workspace }}
     shell: bash
     run: |
       wget https://github.com/andwn/marsdev/releases/download/2017.09.12/marsdev-nosh-nogdb.tar.bz2
