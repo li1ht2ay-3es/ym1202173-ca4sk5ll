@@ -90,7 +90,7 @@ src/boot/rom_head.o: src/boot/rom_head.c
 
 src/boot/rom_head.bin: src/boot/rom_head.o
 	echo "rom_head.o $<"
-	ls -a
+	ls -R
 	$(LD) $(LINKFLAGS) --oformat binary -o $@ $<
 
 
