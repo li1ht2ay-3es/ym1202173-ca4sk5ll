@@ -60,11 +60,12 @@ src/boot/sega.o: src/boot/rom_head.bin
 	$(CC) -o $@ $(LINKFLAGS) $(BOOT_RESOURCES) $(OBJS) $(LIBS)
 
 %.o: %.c
-	@echo "CC $<"
+	echo "CC $<"
+	ls -a
 	@$(CC) $(CCFLAGS) $(INCS) -c $< -o $@
 
 %.o: %.s 
-	@echo "AS $<"
+	echo "AS $<"
 	@$(AS) $(ASFLAGS) $< -o $@
 
 %.s: %.res
@@ -77,9 +78,11 @@ src/boot/sega.o: src/boot/rom_head.bin
 	$(BINTOS) $<
 
 src/boot/rom_head.o: src/boot/rom_head.c
+	ls -a
 	$(CC) $(INCS) -m68000 -Wall -Wextra -std=c99 -c -fno-builtin -o $@ $<
 
 src/boot/rom_head.bin: src/boot/rom_head.o
+	ls -a
 	$(LD) $(LINKFLAGS) --oformat binary -o $@ $<
 
 
