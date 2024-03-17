@@ -78,7 +78,7 @@ runs:
       cd mars/m68k-elf/bin
       # ls -R
       gcc --version
-      m68k-elf-gcc --version
+      sudo m68k-elf-gcc --version
       # m68k-elf-gcc version.c
       # make
 
