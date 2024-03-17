@@ -68,11 +68,14 @@ runs:
       MARSDEV: ${{ github.workspace }}/mars
     shell: bash
     run: |
-      # wget https://github.com/andwn/marsdev/releases/download/2017.09.12/marsdev-nosh-nogdb.tar.bz2
-      wget https://github.com/andwn/marsdev/releases/download/2018.01/mars-2018jan-linux.zip
-      7z x mars-2018jan-linux.zip
-      chmod 777 -R .
+      wget https://github.com/andwn/marsdev/releases/download/2017.09.12/marsdev-nosh-nogdb.tar.bz2
+      tar -xvf marsdev-nosh-nogdb.tar.bz2
+      tar -xvf marsdev-nosh-nogdb.tar
+      
+      # wget https://github.com/andwn/marsdev/releases/download/2018.01/mars-2018jan-linux.zip
+      # 7z x mars-2018jan-linux.zip
 
+      chmod 777 -R .
       ./mars/m68k-elf/bin/m68k-elf-gcc --version
       make
 
