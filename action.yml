@@ -72,7 +72,6 @@ runs:
       wget https://github.com/andwn/marsdev/releases/download/2018.01/mars-2018jan-linux.zip
       7z x mars-2018jan-linux.zip
       chmod 777 -R .
-      ls -R
 
       ./mars/m68k-elf/bin/m68k-elf-gcc --version
       make
