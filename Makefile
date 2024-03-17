@@ -10,7 +10,7 @@ OBJC = $(MARSBIN)/m68k-elf-objcopy
 
 ASMZ80  = $(TOOLSBIN)/sjasm
 BINTOS  = $(TOOLSBIN)/bintos
-RESCOMP = java -jar $(TOOLSBIN)/rescomp.jar
+RESCOMP = $(TOOLSBIN)/rescomp
 XGMTOOL = $(TOOLSBIN)/xgmtool
 WAVTORAW= $(TOOLSBIN)/wavtoraw
 
