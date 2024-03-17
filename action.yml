@@ -70,8 +70,7 @@ runs:
     run: |
       wget https://github.com/andwn/marsdev/releases/download/2017.09.12/marsdev-nosh-nogdb.tar.bz2
       tar -xvf marsdev-nosh-nogdb.tar.bz2
-      tar -xvf marsdev-nosh-nogdb.tar
-      
+
       # wget https://github.com/andwn/marsdev/releases/download/2018.01/mars-2018jan-linux.zip
       # 7z x mars-2018jan-linux.zip
 
