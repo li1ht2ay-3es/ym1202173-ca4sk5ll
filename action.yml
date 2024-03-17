@@ -38,11 +38,6 @@ runs:
       arch: ${{ inputs.arch }}
 
 
-  - uses: li1ht2ay-3es/cc1ch2-ac3io4@custom
-    with:
-      key: ${{ inputs.arch }}
-
-
   - shell: bash
     run: |
       merge () {
@@ -70,8 +65,6 @@ runs:
   - if: inputs.arch == 'so64'
     working-directory: ${{ github.workspace }}
     env:
-      CC: ccache gcc
-      CXX: ccache g++
       MARSDEV: ${{ github.workspace }}/mars
     shell: bash
     run: |
@@ -84,7 +77,8 @@ runs:
       mars/m68k-elf/bin/m68k-elf-gcc --version
       cd mars/m68k-elf/bin
       # ls -R
-      ./m68k-elf-gcc --version
+      gcc --version
+      m68k-elf-gcc --version
       # m68k-elf-gcc version.c
       # make
 
