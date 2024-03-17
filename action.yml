@@ -79,6 +79,6 @@ runs:
 
   - uses: actions/upload-artifact@main
     with:
-      name: program_${{ inputs.arch }}
+      name: ym2017_${{ inputs.arch }}
       path: |
         ${{ github.workspace }}/**.bin
