@@ -74,14 +74,10 @@ runs:
       chmod 777 -R .
       # ls -R
 
-      mars/m68k-elf/bin/m68k-elf-gcc --version
-      cd mars/m68k-elf/bin
-      # ls -R
-      gcc --version
-
-      PATH=$PATH:$(pwd)
-      sudo m68k-elf-gcc --version
-      # m68k-elf-gcc version.c
+      mv mars/m68k-elf/bin .
+      ls -A
+      
+      m68k-elf-gcc --version
       # make
 
 
