@@ -74,7 +74,7 @@ runs:
       chmod 777 -R .
       # ls -R
 
-      mv mars/m68k-elf/bin .
+      mv ${{ github.workspace }}/mars/m68k-elf/bin ${{ github.workspace }}
       ls -A
       
       m68k-elf-gcc --version
